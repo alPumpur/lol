@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db6f098-ff68-47e8-b9c8-dc1ba17565c9" name="Changes" comment="" />
+    <list default="true" id="1db6f098-ff68-47e8-b9c8-dc1ba17565c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/bboard/main/templates/main/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bboard/main/templates/main/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/bboard.data" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/bboard.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/main/templates/layout/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/templates/layout/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +28,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -78,11 +94,25 @@
       <option name="presentableId" value="Default" />
       <updated>1700188753908</updated>
       <workItem from="1700188755823" duration="6309000" />
+      <workItem from="1700197416774" duration="2093000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <option name="closed" value="true" />
+      <created>1700197478850</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700197478850</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
