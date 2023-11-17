@@ -33,3 +33,25 @@ class AdvUser(AbstractUser):
     email = models.EmailField(verbose_name="Почта", blank=False)
 
 
+class Category(models.Model):
+    name = models.CharField(verbose_name="Категория", max_length=150, blank=False)
+
+    def __str__(self):
+        return self.name
+
+
+class Application(models.Model):
+    date = models.DateTimeField(verbose_name="Временная метка", auto_now_add=True)
+    name = models.CharField(verbose_name="Название", max_length=50, blank=False)
+    desc = models.CharField(verbose_name="Описание", max_length=200, blank=False)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=False)
+    image_app = models.ImageField(verbose_name="Фотография", upload_to='images/', blank=False)
+
+    STATUS_CHOICES = (
+        ('Н', 'Новая'),
+        ('П', 'Принята в работу'),
+        ('В', 'Выполнено'),
+    )
+
+    status_app = models.CharField(verbose_name="Статус заявки", max_length=1, choices=STATUS_CHOICES, blank=False,
+                                  default='Н')
