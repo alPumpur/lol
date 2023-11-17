@@ -1,4 +1,25 @@
 {% extends "layout/basic.html" %}
+
 {% block content %}
-<h2>Последние 4 заявки</h2>
+    <h2>Главная страница</h2>
+
+    {% if user.is_authenticated %}
+    <h4>Добро пожаловать! {{user.first_name}}</h4>
+    {% if num_complete %}
+    <p>Список последних выполненных заявок:</p>
+    {% for app in num_complete %}
+        <li><strong>Дата:</strong> {{app.date_app}}</li>
+        <li><strong>Название:</strong> {{app.name_app}}</li>
+        <li><strong>Категория:</strong> {{app.category}}</li>
+        <li><img class="img" src="/media/{{ app.image_app }}"></li>
+        {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>На данный момент выполненных заявок нет</p>
+    {% endif %}
+    <p>Количество заявок находящихся в работе: {{ num_applications }}</p>
+    {% else %}
+    <h3>Добро пожаловать!</h3>
+    {% endif %}
 {% endblock %}

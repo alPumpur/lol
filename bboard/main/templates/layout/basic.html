@@ -29,18 +29,18 @@ initial-scale=1, shrink-to-fit=no">
             </div>
         </div>
         {% else %}
-        <a class="p-2 text-dark" href="#">Регистрация</a>
+        <a class="p-2 text-dark" href="{% url 'main:register' %}">Регистрация</a>
         <a class="p-2 text-dark" href="{% url 'main:login' %}">Вход</a>
         {% endif %}
     </div>
     <div class="row">
         <nav class="col-md-auto nav flex-column">
             <a class="nav-link root" href="{% url 'main:index'%}">Главная</a>
-            <span class="nav-link root font-weight-bold">Выполненные заявки</span>
-            <a class="nav-link" href="#">Заявка 1</a>
-            <a class="nav-link" href="#">Заявка 2</a>
-            <a class="nav-link" href="#">Заявка 3</a>
-            <a class="nav-link" href="#">Заявка 4</a>
+<!--            <span class="nav-link root font-weight-bold">Выполненные заявки</span>-->
+<!--            <a class="nav-link" href="#">Заявка 1</a>-->
+<!--            <a class="nav-link" href="#">Заявка 2</a>-->
+<!--            <a class="nav-link" href="#">Заявка 3</a>-->
+<!--            <a class="nav-link" href="#">Заявка 4</a>-->
         </nav>
         <div class="container">
             {% bootstrap_messages %}
