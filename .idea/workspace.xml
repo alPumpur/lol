@@ -4,29 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db6f098-ff68-47e8-b9c8-dc1ba17565c9" name="Changes" comment="создание регистрации">
-      <change afterPath="$PROJECT_DIR$/bboard/images/cat-four.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/images/cat-one.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/images/cat-tree.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/images/cat-two.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/main/migrations/0002_remove_advuser_is_activated_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/main/migrations/0003_category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/main/migrations/0004_application.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/main/migrations/0005_rename_image_application_image_app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/media/images/cat-four.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/media/images/cat-one.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/media/images/cat-tree.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bboard/media/images/cat-two.jpg" afterDir="false" />
+    <list default="true" id="1db6f098-ff68-47e8-b9c8-dc1ba17565c9" name="Changes" comment="отображение главной страницы">
+      <change afterPath="$PROJECT_DIR$/bboard/main/templates/main/create_application.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/bboard.data" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/bboard.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/bboard/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/bboard/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/bboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/bboard/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/main/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/main/templates/layout/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/templates/layout/basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/templates/main/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/main/templates/main/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/templates/main/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +103,8 @@
       <workItem from="1700197416774" duration="2093000" />
       <workItem from="1700220343980" duration="21000" />
       <workItem from="1700220372907" duration="20000" />
-      <workItem from="1700220393421" duration="17711000" />
+      <workItem from="1700220393421" duration="18494000" />
+      <workItem from="1700292419163" duration="4217000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -136,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700231507539</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="отображение главной страницы">
+      <option name="closed" value="true" />
+      <created>1700246064758</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700246064758</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +139,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="создание регистрации" />
-    <option name="LAST_COMMIT_MESSAGE" value="создание регистрации" />
+    <MESSAGE value="отображение главной страницы" />
+    <option name="LAST_COMMIT_MESSAGE" value="отображение главной страницы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

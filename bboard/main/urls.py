@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index
+from .views import index, CreateApplicationView
 from .views import BBLoginView
 from .views import RegisterDoneView, RegisterUserView
 from .views import user_activate
@@ -17,4 +17,5 @@ urlpatterns = [
    path('accounts/register/', RegisterUserView.as_view(), name='register'),
    path('accounts/register/activate/<str:sign>/', user_activate, name='register_activate'),
    path('accounts/profile/', profile, name='profile'),
+   path('accounts/create/', CreateApplicationView.as_view(), name='create_application'),
 ]
