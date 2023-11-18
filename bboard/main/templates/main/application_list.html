@@ -1,0 +1,28 @@
+{% extends "layout/basic.html" %}
+
+{% block content %}
+    <h1>Мои заявки</h1>
+    <hr>
+    {% if application_list %}
+    <ul>
+
+      {% for app in application_list %}
+      <li style="list-style: none">
+            <p><strong>Дата создания:</strong> {{app.date}}</p>
+            <p><strong>Нзвание::</strong> {{app.name}}</p>
+            <p><strong>Описание:</strong> {{app.desc}}</p>
+            <p><strong>Категория:</strong> {{app.category}}</p>
+            <p><strong>Статус:</strong> {{app.status_app}}</p>
+            <p><img style="max-width:100px; max-height:100px;" class="img" src="/media/{{ app.image_app }}"></p>
+            <nav class="col-md-auto nav flex-column">
+                <a class="nav-link root" href="{% url 'main:application_delete' pk=app.id %}">Удалить</a>
+            </nav>
+            <hr>
+
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>There are no applications</p>
+    {% endif %}
+{% endblock %}

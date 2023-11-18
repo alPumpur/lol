@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db6f098-ff68-47e8-b9c8-dc1ba17565c9" name="Changes" comment="отображение главной страницы">
-      <change afterPath="$PROJECT_DIR$/bboard/main/templates/main/create_application.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bboard/main/templates/main/application_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bboard/main/templates/main/application_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/bboard.data" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/bboard.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/main/templates/layout/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/templates/layout/basic.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/main/templates/main/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/templates/main/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/main/urls.py" afterDir="false" />

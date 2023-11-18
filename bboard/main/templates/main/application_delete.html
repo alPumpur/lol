@@ -1,0 +1,17 @@
+{% extends "layout/basic.html" %}
+
+
+{% load bootstrap4 %}
+
+
+{% block title %} Удаление Заявки {% endblock %}
+
+
+{% block content %}
+<h2>Удаление заявки {{ app.name }}</h2>
+<p style="color: darkred">Вы уверены, что хотите удалить заявку?</p>
+<form method="post">
+   {% csrf_token %}
+   {% buttons submit='Удалить' %} {% endbuttons %}
+</form>
+{% endblock %}

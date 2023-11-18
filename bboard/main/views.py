@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.views import LoginView
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DeleteView
 from django.core.signing import BadSignature
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LogoutView
 from .forms import RegisterUserForm, CreateApplicationForm
+from django.views import generic
 
 def index(request):
     num_applications = Application.objects.filter(status_app__exact='П').count()
@@ -67,3 +68,13 @@ class CreateApplicationView(CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(CreateApplicationView, self).form_valid(form)
+
+class ApplicationListView(generic.ListView):
+    model = Application
+    context_object_name = 'application_list'
+    template_name = 'application_list.html'
+
+class DeleteApplicationView(LoginRequiredMixin, DeleteView):
+   model = Application
+   template_name = 'main/application_delete.html'
+   success_url = reverse_lazy('main:index')
