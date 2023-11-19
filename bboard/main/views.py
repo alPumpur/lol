@@ -11,6 +11,7 @@ from django.contrib.auth.views import LogoutView
 from .forms import RegisterUserForm, CreateApplicationForm
 from django.views import generic
 
+
 def index(request):
     num_applications = Application.objects.filter(status_app__exact='П').count()
     num_complete = Application.objects.filter(status_app__exact='В').order_by('-date')[:4]
@@ -60,6 +61,7 @@ def profile(request):
 class BBLogoutView(LoginRequiredMixin, LogoutView):
     template_name = 'main/logout.html'
 
+
 class CreateApplicationView(CreateView):
     form_class = CreateApplicationForm
     template_name = 'main/create_application.html'
@@ -69,12 +71,14 @@ class CreateApplicationView(CreateView):
         form.instance.user = self.request.user
         return super(CreateApplicationView, self).form_valid(form)
 
+
 class ApplicationListView(generic.ListView):
     model = Application
     context_object_name = 'application_list'
     template_name = 'application_list.html'
 
+
 class DeleteApplicationView(LoginRequiredMixin, DeleteView):
-   model = Application
-   template_name = 'main/application_delete.html'
-   success_url = reverse_lazy('main:index')
+    model = Application
+    template_name = 'main/application_delete.html'
+    success_url = reverse_lazy('main:index')

@@ -3,6 +3,7 @@ from django.core.exceptions import ValidationError
 from django import forms
 from .models import AdvUser, Application
 
+
 class RegisterUserForm(forms.ModelForm):
     email = forms.EmailField(required=True,
                              label='Адрес электронной почты')
@@ -47,6 +48,13 @@ class RegisterUserForm(forms.ModelForm):
 
 
 class CreateApplicationForm(forms.ModelForm):
+
+    def clean(self):
+        image = self.cleaned_data.get('image_app')
+
+        if image.size > 2097152:
+            raise ValidationError("Прикрепляемая фотография должна быть меньше чем 2МБ")
+
     class Meta:
         model = Application
         fields = ('name', 'desc', 'category', 'image_app')

@@ -45,7 +45,8 @@ class Application(models.Model):
     name = models.CharField(verbose_name="Название", max_length=50, blank=False)
     desc = models.CharField(verbose_name="Описание", max_length=200, blank=False)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=False)
-    image_app = models.ImageField(verbose_name="Фотография", upload_to='images/', blank=False)
+    image_app = models.ImageField(verbose_name="Фотография", upload_to='images/', blank=False,
+                                  validators=[FileExtensionValidator(allowed_extensions=['png', 'jpg', 'jpeg', 'bmp'])])
 
     STATUS_CHOICES = (
         ('Н', 'Новая'),

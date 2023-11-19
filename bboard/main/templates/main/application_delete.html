@@ -9,9 +9,14 @@
 
 {% block content %}
 <h2>Удаление заявки {{ app.name }}</h2>
+ {% if object.status_app == 'Н' %}
 <p style="color: darkred">Вы уверены, что хотите удалить заявку?</p>
 <form method="post">
    {% csrf_token %}
    {% buttons submit='Удалить' %} {% endbuttons %}
 </form>
+      {% else %}
+             <p>Можно удалять только заявки со статусом "Новая"</p>
+      {% endif %}
 {% endblock %}
+
