@@ -82,3 +82,20 @@ class DeleteApplicationView(LoginRequiredMixin, DeleteView):
     model = Application
     template_name = 'main/application_delete.html'
     success_url = reverse_lazy('main:index')
+
+
+@login_required()
+def UserProfile(request):
+    status_filter = request.GET.get('status_app', 'all')
+
+    if status_filter == 'all':
+        applications = Application.objects.filter(user=request.user).order_by('-date')
+    else:
+        applications = Application.objects.filter(user=request.user, status_app=status_filter).order_by('-date')
+
+    context = {
+        'applications': applications,
+        'status_filter': status_filter,
+    }
+
+    return render(request, 'main/profile.html', context)

@@ -1,10 +1,11 @@
 from django.urls import path
-from .views import index, CreateApplicationView, ApplicationListView, DeleteApplicationView
+from .views import index, CreateApplicationView, ApplicationListView, DeleteApplicationView, UserProfile
 from .views import BBLoginView
 from .views import RegisterDoneView, RegisterUserView
 from .views import user_activate
 from .views import profile
 from .views import BBLogoutView
+from . import views
 
 app_name = 'main'
 
@@ -19,5 +20,6 @@ urlpatterns = [
    path('accounts/profile/', profile, name='profile'),
    path('accounts/create/', CreateApplicationView.as_view(), name='create_application'),
    path('applications/', ApplicationListView.as_view(), name='application_list'),
-   path('applications/delete/<int:pk>/', DeleteApplicationView.as_view(), name='application_delete')
+   path('applications/delete/<int:pk>/', DeleteApplicationView.as_view(), name='application_delete'),
+   path('applications/status_app', views.UserProfile, name='profile'),
 ]

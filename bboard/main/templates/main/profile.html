@@ -1,12 +1,34 @@
 {% extends "layout/basic.html" %}
-{% load bootstrap4 %}
-{% block title %} Профиль пользователя {% endblock %}
+
 {% block content %}
-<h2>Профиль пользователя {{ user.username }}</h2>
+    <h1>Мои заявки {{app.user}}</h1>
+    <hr>
+    {% if application_list %}
+         <label for="status_filter">Фильтр по статусу:</label>
+        <select name="status_filter" id="status_filter" onchange="location.href = '{% url 'profile' %}?status_app=' + this.value;">
+            <option value="all" {% if status_filter == 'all' %}selected{% endif %}>Все</option>
+            <option value="Н" {% if status_filter == 'Н' %}selected{% endif %}>Новые</option>
+            <option value="П" {% if status_filter == 'П' %}selected{% endif %}>В работе</option>
+            <option value="В" {% if status_filter == 'В' %}selected{% endif %}>Выполненные</option>
+        </select>
+    <ul>
 
-<p>Здравствуйте! </p>
+      {% for app in application_list %}
+      <li style="list-style: none">
+            <p><strong>Дата создания:</strong> {{app.date}}</p>
+            <p><strong>Название::</strong> {{app.name}}</p>
+            <p><strong>Описание:</strong> {{app.desc}}</p>
+            <p><strong>Категория:</strong> {{app.category}}</p>
+            <p><strong>Статус:</strong> {{app.status_app}}</p>
+            <nav class="col-md-auto nav flex-column">
+                <a class="nav-link root" href="{% url 'main:application_delete' pk=app.id %}">Удалить</a>
+            </nav>
+            <hr>
 
-<h3>Ваши заявки</h3>
-
-
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <p>There are no applications</p>
+    {% endif %}
 {% endblock %}
